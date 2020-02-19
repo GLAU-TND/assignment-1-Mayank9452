@@ -8,4 +8,20 @@ public class Person {
     private ArrayList<Long> contactNumber;
     private String mailId;
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public ArrayList<Long> getContactNumber() {
+        return contactNumber;
+    }
+
+    public String getMailId() {
+        return mailId;
+    }
+
 }
