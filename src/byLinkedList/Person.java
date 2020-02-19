@@ -46,4 +46,15 @@ public class Person {
         this.contactNumber = contactNumber;
         this.mailId = mailId;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Person{");
+        sb.append("firstName='").append(firstName).append('\'');
+        sb.append(", lastName='").append(lastName).append('\'');
+        sb.append(", contactNumber=").append(contactNumber);
+        sb.append(", mailId='").append(mailId).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }
