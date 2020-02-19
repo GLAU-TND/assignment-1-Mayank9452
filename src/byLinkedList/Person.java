@@ -24,4 +24,19 @@ public class Person {
         return mailId;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setContactNumber(ArrayList<Long> contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    public void setMailId(String mailId) {
+        this.mailId = mailId;
+    }
 }
