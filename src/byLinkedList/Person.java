@@ -39,4 +39,11 @@ public class Person {
     public void setMailId(String mailId) {
         this.mailId = mailId;
     }
+
+    public Person(String firstName, String lastName, ArrayList<Long> contactNumber, String mailId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contactNumber = contactNumber;
+        this.mailId = mailId;
+    }
 }
