@@ -27,6 +27,7 @@ public class ContactList implements ADT<Person> {
     @Override
     public void remove(Person data) {
 
+
     }
 
     @Override
@@ -92,5 +93,17 @@ public class ContactList implements ADT<Person> {
                 current = current.getNext();
             }
         }
+    }
+
+    public int printName() {
+        System.out.println("Here are all your contacts: ");
+        Node<Person> temp = head;
+        int i = 1;
+        while (temp != null) {
+            System.out.println(i++ + ". " + temp.getData().getFirstName() + " " + temp.getData().getLastName());
+            temp = temp.getNext();
+        }
+        System.out.print("Press the number against the contact to delete it:");
+        return sc.nextInt();
     }
 }
