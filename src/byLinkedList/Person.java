@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Person {
     private String firstName;
     private String lastName;
-    private ArrayList<Long> contactNumber;
+    private ArrayList<String> contactNumber;
     private String mailId;
 
     public String getFirstName() {
@@ -16,8 +16,11 @@ public class Person {
         return lastName;
     }
 
-    public ArrayList<Long> getContactNumber() {
-        return contactNumber;
+    public Person() {
+        this.firstName = null;
+        this.lastName = null;
+        this.contactNumber = null;
+        this.mailId = null;
     }
 
     public String getMailId() {
@@ -32,29 +35,24 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public void setContactNumber(ArrayList<Long> contactNumber) {
-        this.contactNumber = contactNumber;
+    public ArrayList<String> getContactNumber() {
+        return contactNumber;
     }
 
     public void setMailId(String mailId) {
         this.mailId = mailId;
     }
 
-    public Person(String firstName, String lastName, ArrayList<Long> contactNumber, String mailId) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public void setContactNumber(ArrayList<String> contactNumber) {
         this.contactNumber = contactNumber;
-        this.mailId = mailId;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Person{");
-        sb.append("firstName='").append(firstName).append('\'');
-        sb.append(", lastName='").append(lastName).append('\'');
-        sb.append(", contactNumber=").append(contactNumber);
-        sb.append(", mailId='").append(mailId).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "First Name: " + firstName + "\n" +
+                "Last Name: " + lastName + "\n" +
+                "Contact Number: " + contactNumber + "\n" +
+                "Email address: " + mailId
+                ;
     }
 }
