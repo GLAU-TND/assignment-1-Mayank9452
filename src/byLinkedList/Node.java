@@ -1,6 +1,6 @@
 package byLinkedList;
 
-public class Node {
+public class Node<Person> {
     private Person data;
     private Node next;
 
@@ -20,8 +20,8 @@ public class Node {
         this.next = next;
     }
 
-    public Node(Person data, Node next) {
+    public Node(Person data) {
         this.data = data;
-        this.next = next;
+        this.next = null;
     }
 }
