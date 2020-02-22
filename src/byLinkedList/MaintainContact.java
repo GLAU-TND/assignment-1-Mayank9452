@@ -20,13 +20,16 @@ public class MaintainContact {
         while (true) {
             System.out.print("Number:");
             number.add(sc.nextLine());
-            System.out.println("continue(y/n)");
+            System.out.println("Would you like to add another contact number? (y/n)");
             if (sc.nextLine().equals("n"))
                 break;
         }
         person.setContactNumber(number);
-        System.out.print("Email:");
-        person.setMailId(sc.nextLine());
+        System.out.println("Would you like to add email address? (y/n)");
+        if (sc.nextLine().equals("y")) {
+            System.out.print("Email:");
+            person.setMailId(sc.nextLine());
+        }
 
         return person;
 
