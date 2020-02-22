@@ -36,6 +36,14 @@ public class ContactList implements ADT<Person> {
 
     @Override
     public void print() {
-
+        System.out.println("---Here are all your contacts---\n" +
+                "-------- * -------- * -------- * --------");
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.getData());
+            temp = temp.getNext();
+            System.out.println("-------- * -------- * -------- * --------" + "\n" + "-------- * -------- * -------- * --------");
+        }
+        System.out.println();
     }
 }
