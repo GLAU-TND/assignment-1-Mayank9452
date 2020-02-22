@@ -31,6 +31,26 @@ public class ContactList implements ADT<Person> {
 
     @Override
     public Person search(String firstName) {
+        Node<Person> temp = head;
+        int count = 0;
+        while (temp != null) {
+            if (temp.getData().getFirstName().equals(firstName))
+                count++;
+
+            temp = temp.getNext();
+        }
+        if (count != 0) {
+            System.out.println(count + " match found!\n-------- * -------- * -------- * --------");
+            temp = head;
+            while (temp != null) {
+                if (temp.getData().getFirstName().equals(firstName)) {
+                    System.out.println(temp.getData());
+                    System.out.println("-------- * -------- * -------- * --------");
+                }
+                temp = temp.getNext();
+            }
+        } else
+            System.out.println("No Result Found.");
 
         return null;
     }
