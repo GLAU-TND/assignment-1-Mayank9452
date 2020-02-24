@@ -49,10 +49,29 @@ public class Person {
 
     @Override
     public String toString() {
-        return "First Name: " + firstName + "\n" +
-                "Last Name: " + lastName + "\n" +
-                "Contact Number: " + contactNumber + "\n" +
-                "Email address: " + mailId
-                ;
+        String contact = "";
+        for (int i = 0; i < contactNumber.size(); i++) {
+            contact += contactNumber.get(i);
+            contact += " ";
+        }
+        if (mailId != null) {
+            if (this.contactNumber.size() > 1) {
+                return "First Name: " + firstName + "\n" +
+                        "Last Name: " + lastName + "\n" +
+                        "Contact Number(s): " + contact + "\n" +
+                        "Email address: " + mailId;
+
+            } else {
+                return "First Name: " + firstName + "\n" +
+                        "Last Name: " + lastName + "\n" +
+                        "Contact Number: " + contact + "\n" +
+                        "Email address: " + mailId;
+            }
+        } else {
+            return "First Name: " + firstName + "\n" +
+                    "Last Name: " + lastName + "\n" +
+                    "Contact Number: " + contact + "\n"
+                    ;
+        }
     }
 }

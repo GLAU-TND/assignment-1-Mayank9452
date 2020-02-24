@@ -42,7 +42,7 @@ public class ContactList implements ADT<Person> {
 
             if (previous != null) {
                 response = previous.getNext();
-                previous.setNext(null);
+                previous.setNext(previous.getNext().getNext());
 
             } else {
                 response = head;
